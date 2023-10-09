@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom';
 
-function Item({id, title }) {
+function Item({id, title, image}) {
     return <div className = "card mb-3">
-        {id}: {title} <Link to={`/detail/${id}`}>Link</Link>
+        {/* {personality} */}
+        <img src={image[0].url} alt="logo" />
+        {/* {console.log(image[0].url)}; */}
+        {/* <img src={require(`/PHImage/${image}`)}/> */}
+        {title}
+        <Link to={`/detail/${id}`}>Link</Link>
         </div>;
 }
 

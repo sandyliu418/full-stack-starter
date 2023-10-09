@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { useStaticContext } from './StaticContext';
 
-import  Item  from './Item'
+import  Item  from './Item';
 import { useEffect, useState } from 'react';
 
 function Home() {
@@ -25,14 +25,37 @@ function Home() {
       </Helmet> {/* to write a comment using javascript use {} before your javascript 
       command */}
       <main className="container">
-        <h1>Home</h1>
+        <div className='outerWindow'>
+          <div className="innerWindow">
+          <div className="cardDisplay">
+          {/* {image.map((anything) => (
+                <Item key={anything.id} {...anything} />
+              ))} */}
+            {data?.records.map((record) => <Item key={record.id} id={record.id} title={record.fields.Breed} image={record.fields.Image}/>)}</div>
+          </div>
+        </div>
+        <div className="outerDoor">
+          <div className="topInnerDoor">
+            <div className="leftString"></div>
+            <div className="rightString"></div>
+            <div className="sign">
+              <div className="shelter">shelter</div>
+            </div>
+          </div>
+          <div className="lowerInnerDoor"></div>
+          <div className="doorKnob">
+            <div className="keyholeTop"></div>
+            <div className="keyholeBottom"></div>
+          </div>
+        </div>
+        {/* <h1>Home</h1>  */}
 
         <div className="row">
-          <div className="col-9">{data?.records.map((record) => <Item key={record.id} id={record.id} title={record.fields.Breed} />)}</div>
-          <div className="col-3">3 col</div>
+          {/* <div className="col-9">{data?.records.map((record) => <Item key={record.id} id={record.id} title={record.fields.Breed} personality={record.fields.Personality}/>)}</div> */}
+          {/* <div className="col-3">3 col</div> */}
         </div>
 
-        {data?.records.map((record) => <Item key={record.id} id={record.id} title={record.fields.Breed} />)}
+        {/* {data?.records.map((record) => <Item key={record.id} id={record.id} title={record.fields.Breed} />)} */}
         {/* <p>This is where it starts.</p>
         <Item title = "title1"></Item>
         <Item title = "title2"></Item>
