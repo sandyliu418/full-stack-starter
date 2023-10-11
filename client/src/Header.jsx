@@ -41,31 +41,58 @@ function Header() {
   }
 
   return (
-    
     <nav className="header navbar navbar-expand-md navbar-light bg-light fixed-top" id="customNavBar">
-      <div className='outerCircle'><div className="circle1"></div></div>
-      <div className='outerCircle'><div className="circle2"></div></div>
-      <div className='outerCircle'><div className="circle1"></div></div>
-      <div className='outerCircle'><div className="circle2"></div></div>
-      <div className='outerCircle'><div className="circle1"></div></div>
-      <div className='outerCircle'><div className="circle2"></div></div>
-      <div className='outerCircle'><div className="circle1"></div></div>
-      <div className='outerCircle'><div className="circle2"></div></div>
-      <div className='outerCircle'><div className="circle1"></div></div>
-      <div className='outerCircle'><div className="circle2"></div></div>
-      <div className='outerCircle'><div className="circle1"></div></div>
-      <div className='outerCircle'><div className="circle2"></div></div>
-      <div className='outerCircle'><div className="circle1"></div></div>
-      <div className='outerCircle'><div className="circle2"></div></div>
+      <div className="outerCircle">
+        <div className="circle1"></div>
+      </div>
+      <div className="outerCircle">
+        <div className="circle2"></div>
+      </div>
+      <div className="outerCircle">
+        <div className="circle1"></div>
+      </div>
+      <div className="outerCircle">
+        <div className="circle2"></div>
+      </div>
+      <div className="outerCircle">
+        <div className="circle1"></div>
+      </div>
+      <div className="outerCircle">
+        <div className="circle2"></div>
+      </div>
+      <div className="outerCircle">
+        <div className="circle1"></div>
+      </div>
+      <div className="outerCircle">
+        <div className="circle2"></div>
+      </div>
+      <div className="outerCircle">
+        <div className="circle1"></div>
+      </div>
+      <div className="outerCircle">
+        <div className="circle2"></div>
+      </div>
+      <div className="outerCircle">
+        <div className="circle1"></div>
+      </div>
+      <div className="outerCircle">
+        <div className="circle2"></div>
+      </div>
+      <div className="outerCircle">
+        <div className="circle1"></div>
+      </div>
+      <div className="outerCircle">
+        <div className="circle2"></div>
+      </div>
       {/* <div className="container"> */}
-        {/* <Link className="navbar-brand" to="/" onClick={hideNavbar}>
+      {/* <Link className="navbar-brand" to="/" onClick={hideNavbar}>
           Cat Shop
         </Link> */}
-        <Link className="navbar-brand" to="/" onClick={hideNavbar} id="catShopText">
-          Cat Shop
-        </Link>
-        
-        {/* <button onClick={toggleNavbar} className="navbar-toggler" type="button" aria-label="Toggle navigation">
+      <Link className="navbar-brand" to="/" onClick={hideNavbar} id="catShopText">
+        Cat Shop
+      </Link>
+
+      {/* <button onClick={toggleNavbar} className="navbar-toggler" type="button" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className={classNames('collapse navbar-collapse', { show: isNavbarShowing })}>

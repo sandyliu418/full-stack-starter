@@ -13,7 +13,7 @@
 #customNavBar {
   background-color: #984334 !important;
   height: 130px;
-  position: absolute;  //absolute
+  position: absolute; //absolute
   z-index: -1;
   // need to add make the shop go over the cirlces //
 }
@@ -32,12 +32,12 @@
 //   // z-index: 1; //putting this at -1 makes the inner circle go under
 // }
 
-.circle1 { 
+.circle1 {
   height: 60px;
   width: 120px;
   top: -10px;
   right: -10px; //shifts the position of the inner circle
-  background-color: #FFC53A;
+  background-color: #ffc53a;
   border-radius: 50%;
   display: inline-block;
   margin-top: 10px;
@@ -46,13 +46,13 @@
   // z-index: 1; //putting this at -1 makes the inner circle go under
 }
 
-.circle2 { 
+.circle2 {
   height: 60px;
   width: 120px;
   top: -10px;
   // left: -10px; shifts each pair of circles together
   right: -10px; //shifts the position of the inner circle
-  background-color: #6289ED;
+  background-color: #6289ed;
   border-radius: 50%;
   display: inline-block;
   margin-top: 10px;
@@ -61,17 +61,18 @@
   // z-index: 1; //putting this at -1 makes the inner circle go under
 }
 
-.outerCircle { //became half circ. because removed the nav bar.
-  height: 70px; //70 
+.outerCircle {
+  //became half circ. because removed the nav bar.
+  height: 70px; //70
   min-width: 140px; //140
   top: 50px;
-  background-color: #E06D06;
+  background-color: #e06d06;
   border-radius: 50%;
   // display: inline-block;
   margin-top: 100px;
   position: relative;
   z-index: -1;
-  border-radius: 0 0 150px 150px; 
+  border-radius: 0 0 150px 150px;
   flex: auto;
 }
 
@@ -79,7 +80,7 @@
   height: 600px;
   width: 1000px;
   left: -60px;
-  background: #6A2F24;
+  background: #6a2f24;
   margin-top: 170px;
   position: relative;
 }
@@ -88,17 +89,17 @@
   height: 550px;
   width: 955px;
   left: 20px;
-  background: #5A7D88;
+  background: #5a7d88;
   margin-top: 182px;
   position: relative;
   top: 30px;
   right: -100px;
   z-index: 3;
-  overflow-x: scroll; 
+  overflow-x: scroll;
 }
 
 .outerDoor {
-  background-color: #9A4333;
+  background-color: #9a4333;
   top: -600px;
   height: 670px;
   width: 390px;
@@ -107,7 +108,7 @@
 }
 
 .topInnerDoor {
-  background-color: #C98275;
+  background-color: #c98275;
   height: 430px; //430
   width: 310px;
   position: relative;
@@ -116,7 +117,7 @@
 }
 
 .leftString {
-  background-color: black;
+  background-color: #ffbc70;
   width: 5px;
   height: 40px;
   position: relative;
@@ -124,7 +125,7 @@
 }
 
 .rightString {
-  background-color: black;
+  background-color: #ffbc70;
   width: 5px;
   height: 40px;
   position: relative;
@@ -133,7 +134,7 @@
 }
 
 .sign {
-  background-color: black;
+  background-color: #a35700;
   width: 250px;
   height: 55px;
   position: relative;
@@ -156,7 +157,7 @@
 }
 
 .lowerInnerDoor {
-  background-color: #C98275;
+  background-color: #c98275;
   width: 315px;
   height: 180px;
   left: 50px;
@@ -199,6 +200,7 @@
   position: fixed;
   padding-left: 42%;
   font-size: 70px;
+  word-spacing: 3px;
 }
 
 // .customCatShop {
@@ -208,17 +210,19 @@
 //   padding-left: 30px;
 // }
 
-main { //this is the top left part of the website **NEED TO FIX**
+main {
+  //this is the top left part of the website **NEED TO FIX**
   background-color: #925073;
 }
 
-body { //this is the bottom right of the website **NEED TO FIX**
+body {
+  //this is the bottom right of the website **NEED TO FIX**
   background-color: #925073;
 }
 
 .cardDisplay {
-  overflow-x: overflow; 
-  overflow-y: scroll; 
+  overflow-x: overflow;
+  overflow-y: scroll;
   display: flex;
   gap: 80px;
   width: 4000px; //not sure why the numbers are this big?
@@ -226,23 +230,51 @@ body { //this is the bottom right of the website **NEED TO FIX**
   margin-left: 60px;
 }
 
-.img {
-  width: 100px;
-  height: 100px;
-}
-
 .card.mb-3 {
-  padding: 50px;
+  padding: 20px;
   border-radius: 75px;
-  background-color: gray;
+  background-color: #d9d9d9;
+  width: 328px;
+  filter: drop-shadow(0px 0px 17px #393838);
 }
 
 img {
   border-radius: 50px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  position: relative;
+  left: -8px;
+  filter: drop-shadow(0px 0px 6px #393838);
 }
 
 a {
   text-decoration: none;
   text-align: center;
   color: black;
+}
+
+.catName {
+  font-size: 35px;
+  padding: 15px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.cardDetail {
+  position: relative;
+  left: 50px;
+  top: 50px;
+}
+
+.LifeExpectancy {
+  position: relative;
+  left: 450px;
+  top: -350px;
+}
+
+.PreferredEnvironment {
+  position: relative;
+  left: 450px;
+  top: -325px;
 }
