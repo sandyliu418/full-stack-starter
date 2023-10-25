@@ -1,0 +1,31 @@
+[
+    {
+        "model": "Cat",
+        "data": {
+            "id": 10001,
+            "Breed": "DS1",
+            "MinYears": 10001,
+            "MaxYears": 10011
+        }
+    },
+
+    {
+        "model": "Cat",
+        "data": {
+            "id": 10002,
+            "Breed": "DS2",
+            "MinYears": 20002,
+            "MaxYears": 20022
+        }
+    },
+
+    {
+        "model": "Cat",
+        "data": {
+            "id": 10003,
+            "Breed": "DS3",
+            "MinYears": 30003,
+            "MaxYears": 30033
+        }
+    }
+]
