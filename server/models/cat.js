@@ -19,6 +19,12 @@ export default function (sequelize, DataTypes) {
       Environment: DataTypes.STRING,
       Personality: DataTypes.TEXT,
       Image: DataTypes.STRING,
+      ImageURL: {
+        type: DataTypes.VIRTUAL,
+        get() {
+          return this.assetUrl('Image');
+        }
+      },
       Image2: DataTypes.STRING,
       Image3: DataTypes.STRING,
       Image4: DataTypes.STRING,
@@ -31,5 +37,10 @@ export default function (sequelize, DataTypes) {
       modelName: 'Cat',
     }
   );
+
+    Cat.afterSave(async (record, options) => {
+      record.handleAssetFile('Image', options);
+    });
+
   return Cat;
 }

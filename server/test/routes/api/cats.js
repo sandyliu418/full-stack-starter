@@ -19,10 +19,10 @@ describe('/api/cats', () => {
     const response = await testSession.get('/api/cats').expect(StatusCodes.OK);
     assert.deepStrictEqual(response.status, StatusCodes.OK)
     assert.deepStrictEqual(response.body?.length, 3);
-  })
+  });
 
   it('fetch one Cat record from the table', async () => {
     const response = await testSession.get('/api/cats/10001').expect(StatusCodes.OK);
     assert.deepStrictEqual(response.body?.id, 10001)
-  })
+  });
 });

@@ -11,7 +11,7 @@ const router = express.Router();
 router.get('/', async (req, res) => {
     const records = await models.Cat.findAll();
     res.json(records.map((r) => r.toJSON()));
-})
+});
 
 router.get('/:id', async (req, res) => {
     try {
