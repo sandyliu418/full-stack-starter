@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 
-function Item({ id, title, image }) {
+function Item({ id, title, ImageURL }) {
   return (
     <div className="card mb-3">
       <a href={`/detail/${id}`}>
-        <img src={image[0].url} alt="cat" />
+        <img src={ImageURL} alt="cat" />
       </a>
       {/* <img src={image[0].url} alt="logo" /> */}
       {/* <div className="catName">{title}</div> */}

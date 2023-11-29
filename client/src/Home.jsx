@@ -3,16 +3,18 @@ import { useStaticContext } from './StaticContext';
 
 import Item from './Item';
 import { useEffect, useState } from 'react';
+import { RESET_CONTENT } from 'http-status-codes';
 
 function Home() {
   const [data, setData] = useState();
 
   useEffect(() => {
-    const token = 'patmGL23WnOFhPE6L.bceecd89f7267b2c0b9ef548206bf444c973b1ac0c66babf951c5d40b9b8a557';
-    const url = 'https://api.airtable.com/v0/appxlyRNEkCsi29zT/Cats';
-    fetch(url, {
-      headers: { Authorization: `Bearer ${token}` },
-    })
+    // const token = 'patmGL23WnOFhPE6L.bceecd89f7267b2c0b9ef548206bf444c973b1ac0c66babf951c5d40b9b8a557';
+    // const url = 'https://api.airtable.com/v0/appxlyRNEkCsi29zT/Cats';
+    // fetch(url, {
+    //   headers: { Authorization: `Bearer ${token}` },
+    // })
+    fetch('/api/cats')
       .then((response) => response.json())
       .then((data) => setData(data));
   }, []);
@@ -32,7 +34,7 @@ function Home() {
               {/* {image.map((anything) => (
                 <Item key={anything.id} {...anything} />
               ))} */}
-              {data?.records.map((record) => (
+              {/* {data?.records.map((record) => (
                 <Item
                   key={record.id}
                   id={record.id}
@@ -40,6 +42,9 @@ function Home() {
                   image={record.fields.Image}
                   minYears={record.fields.MinYears}
                 />
+              ))} */}
+              {data?.map((record) => (
+                <Item key={record.id} id={record.id} title={record.Breed} ImageURL={record.ImageURL}/>
               ))}
             </div>
           </div>

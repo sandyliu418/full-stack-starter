@@ -39,6 +39,7 @@ fetch(url, {
       await models.Cat.create({
         Breed: record.fields.Breed,
         MinYears: record.fields.MinYears, //this is where we transport the data
+        //add the MaxYears, Enviornment, anything I want to use on detailed view to show up
         Image,
       });
     }

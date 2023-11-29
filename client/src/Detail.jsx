@@ -6,11 +6,12 @@ function Detail() {
   const { id } = useParams();
   const [data, setData] = useState();
   useEffect(() => {
-    const token = 'patmGL23WnOFhPE6L.bceecd89f7267b2c0b9ef548206bf444c973b1ac0c66babf951c5d40b9b8a557';
-    const url = `https://api.airtable.com/v0/appxlyRNEkCsi29zT/Cats/${id}`;
-    fetch(url, {
-      headers: { Authorization: `Bearer ${token}` },
-    })
+    // const token = 'patmGL23WnOFhPE6L.bceecd89f7267b2c0b9ef548206bf444c973b1ac0c66babf951c5d40b9b8a557';
+    // const url = `https://api.airtable.com/v0/appxlyRNEkCsi29zT/Cats/${id}`;
+    // fetch(url, {
+    //   headers: { Authorization: `Bearer ${token}` },
+    // })
+    fetch(`/api/cats/${id}`)
       .then((response) => response.json())
       .then((data) => setData(data));
   }, [id]);
@@ -24,15 +25,16 @@ function Detail() {
         <div className="innerWindow">
           <div className="">
             <div className="cardDetail">
-              {data && <Item key={data?.id} id={data?.id} title={data?.fields.Breed} image={data?.fields.Image} />}
+              {data && <Item key={data?.id} id={data?.id} title={data?.Breed} ImageURL={data?.ImageURL} />}
+              {/* <h1>{data?.Breed}</h1> */}
             </div>
             <div className="LifeExpectancy">
               <h2>
-                Life Expectancy: {data?.fields.MinYears} - {data?.fields.MaxYears}
+                Life Expectancy: {data?.MinYears} - {data?.MaxYears}
               </h2>
             </div>
             <div className="PreferredEnvironment">
-              <h2>Preferred Environment: {data?.fields.Environment}</h2>
+              <h2>Preferred Environment: {data?.Environment}</h2>
             </div>
           </div>
         </div>
