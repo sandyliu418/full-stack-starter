@@ -11,7 +11,7 @@ const router = express.Router();
 router.post('/', async (req, res) => {
     try {
         const record = await models.Cat.create(_.pick(req.body, [
-            'Breed', 'MinYears'
+            'Breed', 'MinYears', 'MaxYears', 'Image'
         ]));
         res.status(StatusCodes.CREATED).json(record.toJSON());
     } catch (error) {
@@ -29,7 +29,7 @@ router.patch('/:id', async (req, res) => {
     try {
         const record = await models.Cat.findByPk(req.params.id);
         await record.update(_.pick(req.body, [
-            'Breed', 'MinYears'
+            'Breed', 'MinYears', 'MaxYears', 'Image'
         ]));
         res.json(record.toJSON());
     } catch (error) {

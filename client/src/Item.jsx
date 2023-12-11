@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import { useAuthContext } from './AuthContext';
+
 
 function Item({ id, title, ImageURL }) {
+  const { user } = useAuthContext();
   return (
     <div className="card mb-3">
       <a href={`/detail/${id}`}>
@@ -12,6 +15,7 @@ function Item({ id, title, ImageURL }) {
         <a href={`/detail/${id}`}>{title}</a>
       </div>
       {/* <Link to={`/detail/${id}`}>Link</Link> */}
+      {user && <Link to={`/cats/${id}/edit`}>Edit</Link>}
     </div>
   );
 }

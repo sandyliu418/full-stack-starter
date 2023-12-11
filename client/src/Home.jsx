@@ -1,11 +1,14 @@
 import { Helmet } from 'react-helmet-async';
 import { useStaticContext } from './StaticContext';
+import { useAuthContext } from './AuthContext';
+import { Link } from 'react-router-dom';
 
 import Item from './Item';
 import { useEffect, useState } from 'react';
 import { RESET_CONTENT } from 'http-status-codes';
 
 function Home() {
+  const { user } = useAuthContext();
   const [data, setData] = useState();
 
   useEffect(() => {
@@ -27,6 +30,9 @@ function Home() {
       </Helmet>{' '}
       {/* to write a comment using javascript use {} before your javascript 
       command */}
+      {user && <div className="mb-3">
+        <Link to="/cats/new">Create a new Cat</Link>
+      </div>}
       <main className="container">
         <div className="outerWindow">
           <div className="innerWindow">

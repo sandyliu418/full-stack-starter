@@ -13,6 +13,7 @@ import InvitesRoutes from './Invites/InvitesRoutes';
 import PasswordsRoutes from './Passwords/PasswordsRoutes';
 import Register from './Register';
 import UsersRoutes from './Users/UsersRoutes';
+import CatForm from './CatForm';
 
 import Detail from './Detail'; //new
 
@@ -29,6 +30,8 @@ function App() {
             <AppRedirects>
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/cats/new" element={<CatForm />} />
+                <Route path="/cats/:id/edit" element={<CatForm />} />
                 <Route path="/detail/:id" element={<Detail />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/passwords/*" element={<PasswordsRoutes />} />
